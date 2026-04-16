@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      
+
+</head>
+<body>
+
+
+</head>
+<body>
+     <header>
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="My Logo" class="logo">
+        </div>
+
+        <!-- ✅ HAMBURGER BUTTON -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <nav id="navMenu">
+            <a href="home.html">HOME</a>
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="products.html">PRODUCTS</a>
+            <a href="contactus.html">CONTACT US</a>
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+
+<div class="section">
+
+    <!-- Left Image -->
+    <div class="left reveal">
+        <img src="images/RIICCE.jpg" alt="RIICCE">
+    </div>
+
+    <!-- Right Content -->
+    <div class="right">
+
+        <div class="text reveal">
+            <h1>Welcome to Torres Foodline!</h1>
+            <p>
+            Food and Beverage Manufacturing <br>
+            The only food brand that easily delights people,
+            excites their senses and unites their hearts.
+            </p>
+        </div>
+
+        <div class="right-image reveal">
+            <img src="images/PIC.jpg" alt="Facility">
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="card-container reveal">
+
+  <!-- LEFT CARD (IMAGE) -->
+  <div class="card image-card">
+    <img src="images/foodline.jpg" alt="Executive Summary Image">
+  </div>
+
+  <!-- RIGHT CARD (TEXT) -->
+  <div class="card text-card reveal">
+  <h2>Executive Summary</h2>
+  <p class="text-paragraph">
+    Torres Foodline is a trusted supplier of high-quality processed meat products designed to help cafés and restaurants deliver consistent taste, faster food preparation, and better cost control.
+  </p>
+
+  <p class="text-paragraph">
+    We aim to support your business by providing reliable supply, competitive pricing, and products that suit both classic and modern menu concepts.
+  </p>
+</div>
+
+</div>
+
+
+<div class="carousel reveal">
+
+  <div class="slides">
+
+    <div class="slide">
+      <img src="images/andale.jpg" alt="Image 1">
+    </div>
+
+    <div class="slide">
+      <img src="images/artisan.jpg" alt="Image 2">
+    </div>
+
+    <div class="slide">
+      <img src="images/elmejor.jpg" alt="Image 3">
+    </div>
+
+    <div class="slide">
+      <img src="images/elprimo.jpg" alt="Image 4">
+    </div>
+
+    <div class="slide">
+      <img src="images/laprima.jpg" alt="Image 5">
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+<footer class="footer">
+  <div class="footer-content">
+    <p><i class="fas fa-map-marker-alt"></i> YTMI Realty Special Economic Zone, Brgy. Makiling, Calamba, 4027 Laguna</p>
+    
+    <p><i class="fas fa-phone"></i> (049) 502-1530 | 502-1638 loc. 2836 / 2280 / 2582</p>
+    
+   
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("navMenu");
+    nav.classList.toggle("active");
+}
+</script>
+
+<script>
+function revealOnScroll() {
+  const elements = document.querySelectorAll(".reveal");
+
+  elements.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 50 && elementTop > 0) {
+      el.classList.add("active");
+    } else {
+      el.classList.remove("active"); // 👈 this makes it repeat
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,519 @@
+
+     body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 15px 30px;
+        }
+
+        /* RESET (optional but good) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* ✅ only use this */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #34495e;
+    padding: 10px 20px;
+    z-index: 1000;
+    
+}
+
+/* LOGO */
+.logo img {
+    height: auto;           /* Maintain aspect ratio */
+    max-height: 40px;       /* Maximum height on large screens */
+    width: auto;            /* Adjust width automatically */
+    max-width: 100%;        /* Prevent overflowing the container */
+}
+
+/* Optional: Adjust logo size for smaller screens */
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 60px;   /* Smaller logo on tablets and mobiles */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-height: 50px;   /* Even smaller logo on phones */
+    }
+}
+
+
+
+/* NAV LINKS */
+nav {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #34495e;
+    }
+
+    nav a {
+        margin: 2px 0;
+        padding: 10px;
+        width: 100%;
+        text-align: center; /* change to center if you want */
+    }
+
+    nav.active {
+        display: flex;
+    }
+}
+
+/* CONTENT (so navbar doesn't overlap) */
+body {
+    padding-top: 70px;
+}
+
+/* FORM SECTION */
+.content {
+    display: none;
+    padding: 40px;
+}
+
+.active {
+    display: block;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f39c12;
+}
+
+
+.reveal {
+  opacity: 0.7;
+  transform: translateY(40px);
+  transition: all 0.5s ease-out; /* faster */
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+   .section{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+/* Images */
+.left img{
+    width: 1140px;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.left img {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.right-image img{
+    width: 840px;
+    max-width: 100%;
+    height: 450px;
+}
+.right-image img {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Right side layout */
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+/* RESPONSIVE PART */
+@media (max-width: 768px){
+
+    .section{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left img,
+    .right-image img{
+        width: 100%;
+    }
+    
+    .left img{
+        margin-top: 30px;
+    }
+
+}
+
+
+    h1 {
+      font-size: clamp(24px, 5vw, 35px);
+      color: #333333;  /* optional color */
+      text-align: center;
+      margin-top: 0;
+    }
+
+    /* Paragraph style */
+    p {
+      font-size: clamp(20px, 5vw, 22px);
+      color: #555555;   /* optional color */
+      line-height: 1.5; /* spacing between lines */
+      text-align: center;
+      font-style: italic;
+      margin-top: 10px;
+    }
+
+
+
+
+
+
+
+
+/* CONTAINER */
+.card-container {
+  display: flex;
+  width: 100%;
+  height: 600px; /* 🔥 full screen height */
+  padding: 20px;
+  gap: 0;
+  
+}
+
+/* BOTH CARDS */
+.card {
+  flex: 1;
+  padding: 40px;
+  
+}
+
+/* LEFT IMAGE CARD */
+.image-card {
+  padding: 0; /* remove padding so image fills */
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 makes image fill nicely */
+  display: block;
+}
+.image-card img {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RIGHT TEXT CARD */
+.text-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color:#f2f2f2 !important; /* forces the color */ /* 🔥 stronger visible color */
+  padding: 30px;
+  border-radius: 10px;
+   /* 🔥 ADD THIS */
+}
+
+/* TEXT STYLE */
+.text-card h2 {
+  font-size: clamp(28px, 4vw, 35px);
+  margin-bottom: 20px;
+  color: #333;
+  
+}
+
+
+
+/* TEXT STYLE */
+.text-paragraph {
+  font-size: clamp(20px, 2vw, 22px);
+  max-width: 500px;
+  line-height: 1.6;
+  color: #555;
+  font-style: normal; /* ensures text is not italic */
+  text-align: justify;
+  /* 🔥 lighter text */
+}
+   
+
+
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image-card {
+    height: 300px; /* fixed height for mobile */
+  }
+}
+
+
+
+
+
+
+    /* RESET SAFETY (IMPORTANT for navbar spacing issues) */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* =========================
+   CAROUSEL WRAPPER
+========================= */
+.carousel {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+
+  height: 400px;
+  position: relative;
+
+  border-top: 4px solid #1f3c88;
+  border-bottom: 4px solid #c0392b;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   SLIDES TRACK
+========================= */
+.slides {
+  display: flex;
+  width: 100%; /* 5 images */
+  height: 100%;
+
+  animation: slideAnimation 20s infinite;
+}
+
+/* =========================
+   EACH SLIDE
+========================= */
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+/* IMAGE */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   AUTO SLIDE ANIMATION
+========================= */
+@keyframes slideAnimation {
+
+  0%   { transform: translateX(0%); }
+  20%  { transform: translateX(0%); }
+
+  25%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-100%); }
+
+  50%  { transform: translateX(-200%); }
+  70%  { transform: translateX(-200%); }
+
+  75%  { transform: translateX(-300%); }
+  90%  { transform: translateX(-300%); }
+
+  100% { transform: translateX(-400%); }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .carousel {
+    height: 220px;
+  }
+}
+
+
+
+
+
+
+
+        /* Footer Styles */
+  .footer {
+    background-color: #555;
+    color: #fff !important; /* force white text */
+    text-align: center;
+    padding: 25px 15px;
+    font-family: Arial, sans-serif;
+}
+
+/* Content layout */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Text + icon */
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    text-align: center;
+    font-style: normal;
+}
+
+/* Icons */
+.footer-content i {
+    color: #fff !important;
+    font-size: 16px;
+}
+
+/* Bottom (All Rights Reserved) */
+.footer-bottom {
+    margin-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 13px;
+    color: #fff !important;
+    text-align: center;
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+    .footer-content p {
+        font-size: 12px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+/* 💻 Desktop */
+@media (min-width: 769px) {
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}

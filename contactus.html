@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contactus.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   
+</head>
+<body>
+    <header>
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="My Logo" class="logo">
+        </div>
+
+        <!-- ✅ HAMBURGER BUTTON -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <nav id="navMenu">
+            <a href="home.html">HOME</a>
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="products.html">PRODUCTS</a>
+            <a href="contactus.html">CONTACT US</a>
+        </nav>
+    </div>
+</header>
+
+
+
+<div class="contact-banner">
+  <img src="images/contact-banner.jpg" alt="Header Banner">
+</div>
+
+
+
+<section class="contact-section reveal">
+    <h1 class="title">CONTACT OUR TEAM</h1>
+
+    <div class="contact-container reveal">
+        <!-- Person 1 -->
+        <div class="card reveal">
+            <div class="name">Charles S. Salud</div>
+            <div class="info">
+                <p>charles.salud@torresfoodline.com</p>
+                <p>0977 793 4340</p>
+                <p class="viber">viber ready</p>
+            </div>
+        </div>
+
+        <!-- Person 2 -->
+        <div class="card reveal">
+            <div class="name">Trishcia Magas</div>
+            <div class="info">
+                <p>trishcia.magas@torresfoodline.com</p>
+                <p>0935 059 7951</p>
+                <p class="viber">viber ready</p>
+            </div>
+        </div>
+
+        <!-- Person 3 -->
+        <div class="card reveal">
+            <div class="name">Ray Allen Lopez</div>
+            <div class="info">
+                <p>allen.lopez@torresfoodline.com</p>
+                <p>0962 436 2039</p>
+                <p class="viber">viber ready</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p><i class="fas fa-map-marker-alt"></i> YTMI Realty Special Economic Zone, Brgy. Makiling, Calamba, 4027 Laguna</p>
+    
+    <p><i class="fas fa-phone"></i> (049) 502-1530 | 502-1638 loc. 2836 / 2280 / 2582</p>
+    
+    
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+}
+</script>
+
+<script>
+function revealOnScroll() {
+  const elements = document.querySelectorAll(".reveal");
+
+  elements.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 50 && elementTop > 0) {
+      el.classList.add("active");
+    } else {
+      el.classList.remove("active"); // 👈 this makes it repeat
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 15px 50px;
+        }
+
+      /* RESET (optional but good) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* ✅ only use this */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #34495e;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo img {
+    height: auto;           /* Maintain aspect ratio */
+    max-height: 40px;       /* Maximum height on large screens */
+    width: auto;            /* Adjust width automatically */
+    max-width: 100%;        /* Prevent overflowing the container */
+}
+
+/* Optional: Adjust logo size for smaller screens */
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 60px;   /* Smaller logo on tablets and mobiles */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-height: 50px;   /* Even smaller logo on phones */
+    }
+}
+
+
+
+/* NAV LINKS */
+nav {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #34495e;
+    }
+
+    nav a {
+        margin: 2px 0;
+        padding: 10px;
+        width: 100%;
+        text-align: center; /* change to center if you want */
+    }
+
+    nav.active {
+        display: flex;
+    }
+}
+
+
+
+.reveal {
+  opacity: 0.7;
+  transform: translateY(40px);
+  transition: all 0.5s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Header Banner */
+.contact-banner {
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+ 
+}
+
+/* IMAGE */
+.contact-banner img {
+  width: 105%;
+  height: auto; /* 🔥 FIX: no cropping */
+  display: block;
+}
+
+
+.contact-banner img {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive (optional fine tuning) */
+@media (max-width: 768px) {
+  .contact-banner img {
+    max-height: 180px; /* limits size but keeps full image */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-banner img {
+    max-height: 140px;
+  }
+}
+
+
+
+        .contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    padding-top: 70px;
+    padding-bottom: 100px;
+    
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 900;
+    color: #1c2d5a;
+    border: 2px dashed #ccc;
+    display: inline-block;
+    padding: 15px 30px;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+}
+
+.name {
+    background: #1c2d5a;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.info {
+    background: #a40000;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.info p {
+    margin: 8px 0;
+}
+
+.viber {
+    text-decoration: underline;
+}
+
+
+
+        /* Footer Styles */
+         .footer {
+    background-color: #555;
+    color: #fff !important; /* force white text */
+    text-align: center;
+    padding: 25px 15px;
+    font-family: Arial, sans-serif;
+}
+
+/* Content layout */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Text + icon */
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* Icons */
+.footer-content i {
+    color: #fff !important;
+    font-size: 16px;
+}
+
+/* Bottom (All Rights Reserved) */
+.footer-bottom {
+    margin-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 13px;
+    color: #fff !important;
+    text-align: center;
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+    .footer-content p {
+        font-size: 12px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+/* 💻 Desktop */
+@media (min-width: 769px) {
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
