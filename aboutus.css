@@ -254,7 +254,7 @@ transition: all 0.5s ease-out;
 
   .timeline-item h1,
   .timeline-item h3 {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .timeline-item h2,
@@ -281,11 +281,14 @@ body {
 
   border-radius: 50px;
   text-align: center;
+
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 /* Heading */
 .partner-section1 h1 {
-  font-size: clamp(28px, 6vw, 50px);
+  font-size: clamp(22px, 6vw, 50px);
   font-weight: 900;
   color: #b30000;
 
@@ -298,7 +301,7 @@ body {
 
 /* Subtitle */
 .subtitle_ {
- font-size: clamp(22px, 3.5vw, 22px);
+ font-size: clamp(15px, 3.5vw, 22px);
   color: #1e2f5b;
 
   max-width: 700px;     /* keeps it from stretching too wide */
@@ -359,12 +362,12 @@ body {
 /* Text */
 .partner-item h3 {
   margin: 0;
-  font-size: clamp(20px, 4vw, 26px);
+  font-size: clamp(18px, 4vw, 26px);
 }
 
 .partner-item p {
   margin: 5px 0 0;
-  font-size: clamp(18px, 3.5vw, 18px);
+  font-size: clamp(14px, 3.5vw, 18px);
   color: #333;
 }
 
@@ -394,11 +397,13 @@ body {
 /* Section */
 .partner-section {
   background: #f2f2f2;
-  padding: 60px 20px; /* balanced top & bottom */
+  padding: 60px 40px; /* balanced top & bottom */
   text-align: center;
   border-radius: 50px;
   margin-top: 50px;
   margin-bottom: 70px;
+  margin-right: 20px;
+  margin-left: 20px;
 
 }
 
@@ -410,7 +415,7 @@ body {
 
 /* Title (h3) */
 .title {
-  font-size: clamp(36px, 6vw, 40px);
+  font-size: clamp(18px, 6vw, 40px);
   font-weight: 900;
   color: #b30000;
 
@@ -422,7 +427,7 @@ body {
 /* Subtitle (h4) */
 .subtitle {
   color: #b30000;
-  font-size: clamp(20px, 4vw, 20px);
+  font-size: clamp(15px, 4vw, 20px);
   font-weight: bold;
 
   margin: 0 0 40px 0;
@@ -441,13 +446,13 @@ body {
   background: #1e2f5b;
   color: white;
 
-  width: 100%;
+  width: 80%;
   max-width: 600px;
 
   padding: 22px;
   border-radius: 15px;
 
-  font-size: clamp(18px, 3vw, 20px);
+  font-size: clamp(14px, 3vw, 20px);
   font-weight: 600;
 
   text-align: center;

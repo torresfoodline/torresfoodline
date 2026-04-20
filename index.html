@@ -156,10 +156,8 @@ function revealOnScroll() {
     const windowHeight = window.innerHeight;
     const elementTop = el.getBoundingClientRect().top;
 
-    if (elementTop < windowHeight - 50 && elementTop > 0) {
+    if (elementTop < windowHeight - 100) {
       el.classList.add("active");
-    } else {
-      el.classList.remove("active"); // 👈 this makes it repeat
     }
   });
 }
@@ -167,6 +165,7 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 </script>
+
 
 </body>
 </html>
