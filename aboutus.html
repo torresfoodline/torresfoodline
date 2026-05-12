@@ -17,14 +17,18 @@
 </head>
 <body>
      <header>
-    <div class="navbar">
-        <div class="logo">
-            <img src="images/logo.png" alt="My Logo" class="logo">
-        </div>
 
-        <!-- ✅ HAMBURGER BUTTON -->
-        <div class="menu-toggle" onclick="toggleMenu()">
-            ☰
+    <!-- TOP ROW (LOGO) -->
+    <div class="top-bar">
+        <img src="images/logo.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- BOTTOM ROW (NAVIGATION) -->
+    <div class="nav-bar">
+
+        <!-- DOWN ARROW BUTTON -->
+        <div class="dropdown-toggle" onclick="toggleMenu()">
+            ▼
         </div>
 
         <nav id="navMenu">
@@ -33,11 +37,49 @@
             <a href="products.html">PRODUCTS</a>
             <a href="contactus.html">CONTACT US</a>
         </nav>
+
     </div>
+
 </header>
 
 
 
+<section class="story-section reveal">
+
+  <div class="story-container">
+
+    <!-- LEFT SIDE -->
+    <div class="story-left">
+
+      <span class="since">SINCE 1979</span>
+      <h2>Our Story</h2>
+
+      <input type="checkbox" id="read-more-toggle">
+
+      <p class="story-text">
+        Founded in 1979 within the Yazaki Torres Realty Special Economic Zone in Calamba, Laguna, Torres Trading Co. Inc., widely known as Torres Foodline, began with a simple, singular mission: to provide high-quality food for the hardworking employees of Yazaki-Torres.
+
+        <span class="more-text">
+          <br><br>
+          Over the decades, we have grown alongside our community. What started as a dedicated service for our workforce in 1987 expanded significantly by 1992, as we grew our network of canteens within the compound. As our operations evolved, so did our craft; we proudly introduced bakery production, bringing fresh, high-quality baked goods to our offerings.
+
+          <br><br>
+          In 2013, we officially formed Torres Foodline to streamline the management of our growing food manufacturing and service units. Today, we are proud to provide daily nourishment to over 8,300 employees of YTMI, continuing our legacy of service, consistency, and culinary care.
+        </span>
+      </p>
+
+      <label for="read-more-toggle" class="read-more-btn"></label>
+
+    </div>
+
+    <!-- RIGHT SIDE IMAGE -->
+    <div class="story-right">
+      <img src="images/Company.png" alt="Our Company">
+    </div>
+
+  </div>
+
+</section>
 
 
 
@@ -60,20 +102,35 @@
     </div>
 
     <div class="timeline-item reveal">
-      <h3>About Company</h3>
+      <h3>What We Offer</h3>
 
-      <p>• Torres Trading Co. Inc. was founded in 1986 at the YTMI Realty Special Economic Zone in Calamba, Laguna.</p>
-      <p>• Its initial mission was to provide food for the Yazaki – Torres employees. A couple of years after, bakery production was added.</p>
-      <p>• We expanded operations and started our own shopping center to cater to Yazaki Torres employees</p>
-      <p>• Presently, Torres Foodline services 18,300 employees of YTMI (14,000), Murata (1,800)</p>
-      <p>• Honda (2,500) for all their food daily requirements.</p>
-      <p>• In 2013, Torres Foodline was formed to manage its food manufacturing and food service units :</p>
+      <p>We specialize in providing reliable, high-quality food solutions backed by years of industry experience. Our core services include:</p>
+      
 
-      <p class="p1">o Packaged Food</p>
-      <p class="p2">o The Park Cafe and Grill</p>
-      <p class="p3">o The Park Bed and Breakfast</p>
-      <p class="p4">o The Park Events Center</p>
-      <p class="p5">o The Park Food Hub o Shopping Center</p>
+      <p class="p1">Packaged Food: Convenient, high-quality meal solutions tailored for daily needs.</p>
+      <p class="p2">Baked Goods: Freshly prepared pastries and breads baked with care.</p>
+      <p class="p3">Events Catering: Professional catering services designed to make your occasions memorable and delicious.</p>
+      
+    </div>
+
+     <div class="timeline-item reveal">
+      <h3>Our Commitment</h3>
+
+      <p>With nearly five decades of experience, Torres Foodline remains dedicated to our roots. 
+        We understand that food is more than just fuel, it is a vital part of the workday and a way to support 
+        the well-being of the community we serve. Whether through our daily canteen operations or our specialized 
+        catering services, we bring quality and care to every meal.</p>
+      
+      
+    </div>
+
+    <div class="timeline-item reveal">
+      <h3>Our Partners</h3>
+
+      <p class="p1">Retail : South Supermarket, Metro Gaisano , Wrap n Carry, </p>
+      <p class="p2">Horeca : Mr. Takoyaki, Chef Par</p>
+      
+      
     </div>
 
   </div>
@@ -183,18 +240,58 @@
 
 
  <footer class="footer">
-  <div class="footer-content">
-    <p><i class="fas fa-map-marker-alt"></i> YTMI Realty Special Economic Zone, Brgy. Makiling, Calamba, 4027 Laguna</p>
-    
-    <p><i class="fas fa-phone"></i> (049) 502-1530 | 502-1638 loc. 2836 / 2280 / 2582</p>
-    
-   
+  <div class="footer-container">
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-col">
+      <h3>Follow Us</h3>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/ElPrimoPH" target="_blank">
+          <i class="fab fa-facebook-f"></i> El Primo PH
+        </a>
+
+        <a href="https://www.facebook.com/ElMejorArtisanKitchen" target="_blank">
+          <i class="fab fa-facebook-f"></i> El Mejor Artisan Kitchen
+        </a>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+
+      <p class="footer-text">
+        📍 YTMI Realty Special Economic Zone,<br>
+        Brgy. Makiling, Calamba, 4027 Laguna
+      </p>
+
+      <p class="footer-text">
+        ☎ (049) 502-1530 <br>
+        502-1638 loc. 2836 / 2280 / 2582
+      </p>
+    </div>
+
   </div>
 
   <div class="footer-bottom">
-    <p>© 2026 All Rights Reserved.</p>
+    <p>© 2026 All rights reserved.</p>
   </div>
 </footer>
+
+
+
 
 
 
@@ -228,6 +325,10 @@ window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 </script>
 
-
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
 </body>
 </html>
