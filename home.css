@@ -44,6 +44,7 @@ header{
     background:#706f6f;
     position:relative;
    
+   
 }
 
 /* NAV LINKS */
@@ -75,14 +76,20 @@ nav a:hover{
     color:white;
     font-size:22px;
     text-align:center;
-    padding:12px;
+    padding:7px;
     cursor:pointer;
 }
+
+
 
 /* =========================
    MOBILE VIEW
 ========================= */
 @media (max-width:768px){
+
+    .nav-bar {
+      height: 40px;
+    }
 
     body{
         padding-top:120px;
@@ -578,3 +585,9 @@ body {
     line-height: 1.5;
   }
 }
+
+
+
+
+
+
