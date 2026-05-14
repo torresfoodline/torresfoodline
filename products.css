@@ -75,13 +75,19 @@ nav a:hover{
     color:white;
     font-size:22px;
     text-align:center;
-    padding:12px;
+    padding:6px;
     cursor:pointer;
 }
 
 /* =========================
    MOBILE VIEW
 ========================= */
+
+nav-bar {
+  height: 30px;
+}
+
+
 @media (max-width:768px){
 
     body{
@@ -186,6 +192,15 @@ body {
     .header-banner img {
         max-height: 140px;
     }
+}
+
+/* MOBILE VIEW */
+@media (max-width:768px){
+
+    .header-banner{
+        margin-top:110px;
+    }
+
 }
 
 

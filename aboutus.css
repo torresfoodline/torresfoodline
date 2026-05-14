@@ -74,7 +74,7 @@ nav a:hover{
     color:white;
     font-size:22px;
     text-align:center;
-    padding:12px;
+    padding: 6px;
     cursor:pointer;
 }
 
@@ -82,6 +82,10 @@ nav a:hover{
    MOBILE VIEW
 ========================= */
 @media (max-width:768px){
+
+  nav-bar {
+    height: 30px;
+  }
 
     body{
         padding-top:120px;

@@ -76,7 +76,7 @@ nav a:hover{
     color:white;
     font-size:22px;
     text-align:center;
-    padding:7px;
+    padding:6px;
     cursor:pointer;
 }
 
@@ -87,10 +87,10 @@ nav a:hover{
 ========================= */
 @media (max-width:768px){
 
-    .nav-bar {
-      height: 40px;
-    }
-
+     nav-bar {
+      height: 30px;
+     }
+    
     body{
         padding-top:120px;
     }
@@ -440,14 +440,14 @@ body {
 /* SMALL TABLETS / LARGE PHONES */
 @media screen and (max-width: 768px) {
   .carousel {
-    margin-top: 135px;
+    margin-top: 125px;
   }
 }
 
 /* SMALL PHONES */
 @media screen and (max-width: 480px) {
   .carousel {
-    margin-top: 135px;
+    margin-top: 125px;
   }
 }
 
